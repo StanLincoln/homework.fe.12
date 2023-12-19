@@ -1,0 +1,67 @@
+$bg-line: #50806b;
+$primary-text-color: #000;
+$secondary-text-color: #fff;
+$placeholder: #979797;
+$category-color: #343434;
+$section-bg: #E8EDDE;
+$btn-text-color: #fdfbf7;
+$price-color: #d11f1f;
+$primary-font: "Open Sans", sans-serif;
+$secondary-font: "Poppins", sans-serif;
+$footer-primary-font: "Public Sans", sans-serif;
+$footer-secondary-font: "Roboto", sans-serif;
+
+@mixin contentCenter {
+  max-width: 1208px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+@mixin sectionTitle {
+  color: $primary-text-color;
+  font-family: $secondary-font;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 52px;
+  border-bottom: 1px solid #000;
+  padding: 32px 0;
+}
+
+@mixin flexContainer(
+  $justify-content: false,
+  $align-items: false,
+  $gap: false
+) {
+  display: flex;
+
+  @if $justify-content {
+    justify-content: $justify-content;
+  }
+
+  @if $align-items {
+    align-items: $align-items;
+  }
+
+  @if $gap {
+    gap: #{$gap}px;
+  }
+}
+
+@mixin greenBtn {
+  color: $btn-text-color;
+  text-align: center;
+  font-family: $primary-font;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 8px;
+  background: $bg-line;
+  box-shadow: 0px 8px 23px 0px rgba(80, 107, 82, 0.13);
+  padding: 8px;
+  cursor: pointer;
+  &:hover {
+    scale: 1.1;
+    transition: 0.3s;
+  }
+}
